@@ -15,8 +15,8 @@ numbers = [
     ]
 
 arbitrary = [
-    ['Eggs go crack.', 'ducks go quack'],
-    ['Kitty cats mew.', 'Skunks go spew.', 'Owls go whoo.'],
+    ['Eggs go crack.', 'Ducks go quack.'],
+    ['Kitty cats mew.', 'Skunks go spew.', 'Owls go whoo.', 'Lilies gather dew.'],
     ['Swallows swoop.', 'Barn owls whoop.', 'Planes do loops.'],
     ['Dogs go woof.', 'Babies eat poofs.', 'Horses take hoof.'],
     ['Bunnies jump.', 'Politicians stump.', 'Camels hump.'],
@@ -27,28 +27,38 @@ arbitrary = [
     ['Bees go buzz.', 'Peaches have fuzz.'],
     ['Hummingbirds hum.', 'Hands have thumbs.', 'Pirates drink rum.', 'Bees hum.', 'Crickets strum.'],
     ['Birdies tweet.', 'Babies have feet.', 'Cats eat meat.', 'Hungry things eat.', 'Millers grind wheat.'],
-    ['Puppies sigh.', 'Cats close their eyes.', 'Birdies fly.'],
+    ['Puppies sigh.', 'Birdies fly.'],
     ['Kitty cats purr.', 'Gears go whirr.', 'Dogs have fur.', 'Kitten stirs.', 'Gray cat purrs.'],
     ['Raccoons chirp.', 'Babies burp.'],
     ['Long grass bends.', 'Spider mends.'],
-    ['Wind sighs.', 'Whippoorwill cries.'],
+    ['Wind sighs.', 'Whippoorwill cries.', 'Cats close their eyes.'],
     ['Blossoms close.', 'Ducklings doze.'],
-    ['Fireflies blink.', 'First stars wink.'],
+    ['Fireflies blink.', 'First stars wink.', 'Philosophers think.'],
     ['Cattails swish.', 'Herons fish.']
     ]
 
 actions = 'leap jump race romp roam scoot amble splash lope'.split()
-
+num_words = 'Zero One Two Three Four Five Six Seven Eight Nine Ten'.split()
 samp_act = sample(actions, 9)
 samp_arb = sample(arbitrary, 9)
 recap = []
+
+print("""A randomly generated parody of "Ten Sleepy Sheep" by Phyllis Root
+
+"Time to sleep,"
+call the mama sheep
+in the grass knee-deep.
+But ten little sheep
+don't want to sleep.
+""")
+
 for i in range(10,1,-1):
     rhymes_next = choice(numbers[i-1])
     recap.append(rhymes_next)
     rhymes_next = rhymes_next.replace('(','').replace(')','')
     print(i)
-    print(i, 'sheep', samp_act[i-2])
-    print('by the', rhymes_next + '.')
+    print(num_words[i], 'sheep', samp_act[i-2])
+    print(choice(['past', 'by']), 'the', rhymes_next + '.')
     print('\n'.join(sample(samp_arb[i-2], 2)))
     print('Sleep, sheep.\nNow there are...')
     print()

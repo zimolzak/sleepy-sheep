@@ -15,26 +15,26 @@ numbers = [
     ]
 
 arbitrary = [
-    ['Eggs go crack', 'ducks go quack'],
-    ['kitty cats mew', 'skunks go spew', 'owls go whoo'],
-    ['swallows swoop', 'barn owls whoop', 'planes do loops'],
-    ['dogs go woof', 'babies eat poofs', 'horses take hoof'],
-    ['bunnies jump', 'politicians stump', 'camels hump'],
-    ['rain goes drip', 'scissors snip', 'terriers yip'],
-    ['fat cats snore', 'apples have cores', 'weevils bore', 'mouse explores', 'old dog snores'],
-    ['doorknobs twist', 'mills have grist'],
-    ['birdies perch', 'spotlights search', 'priests have church'],
-    ['bees go buzz', 'peaches have fuzz'],
-    ['hummingbirds hum', 'hands have thumbs', 'pirates drink rum', 'bees hum', 'crickets strum'],
-    ['birdies tweet', 'babies have feet', 'cats eat meat', 'hungry things eat', 'millers grind wheat'],
-    ['puppies sigh', 'cats close their eyes', 'birdies fly'],
-    ['kitty cats purr', 'gears go whirr', 'dogs have fur', 'kitten stirs', 'gray cat purrs'],
-    ['raccoons chirp', 'babies burp'],
-    ['long grass bends', 'spider mends'],
-    ['wind sighs', 'whippoorwill cries'],
-    ['blossoms close', 'ducklings doze'],
-    ['fireflies blink', 'first stars wink'],
-    ['cattails swish', 'herons fish']
+    ['Eggs go crack.', 'ducks go quack'],
+    ['Kitty cats mew.', 'Skunks go spew.', 'Owls go whoo.'],
+    ['Swallows swoop.', 'Barn owls whoop.', 'Planes do loops.'],
+    ['Dogs go woof.', 'Babies eat poofs.', 'Horses take hoof.'],
+    ['Bunnies jump.', 'Politicians stump.', 'Camels hump.'],
+    ['Rain goes drip.', 'Scissors snip.', 'Terriers yip.'],
+    ['Fat cats snore.', 'Apples have cores.', 'Weevils bore.', 'Mouse explores.', 'Old dog snores.'],
+    ['Doorknobs twist.', 'Mills have grist.'],
+    ['Birdies perch.', 'Spotlights search.', 'Priests have church.'],
+    ['Bees go buzz.', 'Peaches have fuzz.'],
+    ['Hummingbirds hum.', 'Hands have thumbs.', 'Pirates drink rum.', 'Bees hum.', 'Crickets strum.'],
+    ['Birdies tweet.', 'Babies have feet.', 'Cats eat meat.', 'Hungry things eat.', 'Millers grind wheat.'],
+    ['Puppies sigh.', 'Cats close their eyes.', 'Birdies fly.'],
+    ['Kitty cats purr.', 'Gears go whirr.', 'Dogs have fur.', 'Kitten stirs.', 'Gray cat purrs.'],
+    ['Raccoons chirp.', 'Babies burp.'],
+    ['Long grass bends.', 'Spider mends.'],
+    ['Wind sighs.', 'Whippoorwill cries.'],
+    ['Blossoms close.', 'Ducklings doze.'],
+    ['Fireflies blink.', 'First stars wink.'],
+    ['Cattails swish.', 'Herons fish.']
     ]
 
 samp_arb = sample(arbitrary, 11)

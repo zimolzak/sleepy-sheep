@@ -37,15 +37,19 @@ arbitrary = [
     ['Cattails swish.', 'Herons fish.']
     ]
 
-samp_arb = sample(arbitrary, 11)
+actions = 'leap jump race romp roam scoot amble splash lope'.split()
+
+samp_act = sample(actions, 9)
+samp_arb = sample(arbitrary, 9)
 recap = []
 for i in range(10,1,-1):
     rhymes_next = choice(numbers[i-1])
     recap.append(rhymes_next)
     rhymes_next = rhymes_next.replace('(','').replace(')','')
     print(i)
-    print(i, 'sheep jump\nby the', rhymes_next + '.')
-    print('\n'.join(sample(samp_arb[i], 2)))
+    print(i, 'sheep', samp_act[i-2])
+    print('by the', rhymes_next + '.')
+    print('\n'.join(sample(samp_arb[i-2], 2)))
     print('Sleep, sheep.\nNow there are...')
     print()
 
@@ -58,7 +62,7 @@ One sheep bleats,
 for s1 in recap:
      s2 = re.sub('.*\(', '', s1)
      noun = re.sub('\).*', '', s2)
-     print("One by the " + noun)
+     print("One by the " + noun + ',')
 
 print("""
 and one sheep in

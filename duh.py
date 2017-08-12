@@ -1,20 +1,21 @@
 from random import choice, sample
+import re
 
 numbers = [
-    ['house of fun', 'baby bun', 'flying nun', 'infant son', 'burning sun', 'rabbit run'],
-    ['house of fun', 'baby bun', 'flying nun', 'infant son', 'burning sun', 'rabbit run'],
-    ['drop of dew', 'scooby doo', 'big to-do', 'tall bamboo', 'blue canoe'],
-    ['giant tree', 'bumble bee', 'wheel of brie', 'sounding sea', 'new TV', 'apple tree'],
-    ['old barn door', 'big boat oar', 'wild boar', 'apple core', 'mushroom spore', 'red barn door'],
-    ['big bee hive', 'sour cream and chive', 'old bee hive'],
-    ['pile of sticks', 'ton of bricks', 'muffin mix', 'candle wicks', 'stack of sticks'],
-    ['rose of heaven', 'bread with leaven', 'epitaph of Stevin'],
-    ['heavy weight', 'twist of fate', 'wooden crate', 'iron grate', 'tall green gate'],
-    ['twisty vine', 'bottle of wine', 'friend of mine', 'crooked line', 'Norway pine', 'cucumber vine']
+    ['(house) of fun', 'baby (bun)', 'flying (nun)', 'infant (son)', 'burning (sun)', '(rabbit run)'],
+    ['(house) of fun', 'baby (bun)', 'flying (nun)', 'infant (son)', 'burning (sun)', '(rabbit run)'],
+    ['drop of (dew)', '(scooby doo)', 'big (to-do)', 'tall (bamboo)', 'blue (canoe)'],
+    ['giant (tree)', 'bumble (bee)', 'wheel of (brie)', 'sounding (sea)', 'new (TV)', 'apple (tree)'],
+    ['old barn (door)', 'big boat (oar)', 'wild (boar)', 'apple (core)', 'mushroom (spore)', 'red barn (door)'],
+    ['big bee (hive)', '(sour cream and chive)', 'old bee (hive)'],
+    ['pile of (sticks)', 'ton of (bricks)', 'muffin (mix)', 'candle (wicks)', 'stack of (sticks)'],
+    ['(rose) of heaven', '(bread) with leaven', '(epitaph) of Stevin'],
+    ['heavy (weight)', '(twist) of fate', 'wooden (crate)', 'iron (grate)', 'tall green (gate)'],
+    ['twisty (vine)', 'bottle of (wine)', '(friend) of mine', 'crooked (line)', 'Norway (pine)', 'cucumber (vine)']
     ]
 
 arbitrary = [
-    ['eggs go crack', 'ducks go quack'],
+    ['Eggs go crack', 'ducks go quack'],
     ['kitty cats mew', 'skunks go spew', 'owls go whoo'],
     ['swallows swoop', 'barn owls whoop', 'planes do loops'],
     ['dogs go woof', 'babies eat poofs', 'horses take hoof'],
@@ -37,11 +38,30 @@ arbitrary = [
     ]
 
 samp_arb = sample(arbitrary, 11)
-for i in range(10,0,-1):
+recap = []
+for i in range(10,1,-1):
     rhymes_next = choice(numbers[i-1])
+    recap.append(rhymes_next)
+    rhymes_next = rhymes_next.replace('(','').replace(')','')
     print(i)
-    print(i, 'sheep jump by the', rhymes_next)
+    print(i, 'sheep jump\nby the', rhymes_next + '.')
     print('\n'.join(sample(samp_arb[i], 2)))
     print('Sleep, sheep.\nNow there are...')
     print()
-print('None!')
+
+print("""1
+One sheep bleats,
+"Mama, I can't sleep."
+"Hush," says her mama.
+"Have you tried counting sheep?" """)
+
+for s1 in recap:
+     s2 = re.sub('.*\(', '', s1)
+     noun = re.sub('\).*', '', s2)
+     print("One by the " + noun)
+
+print("""
+and one sheep in
+the grass knee-deep,
+nestled by her mama,
+fast asleep.""")

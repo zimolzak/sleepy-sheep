@@ -60,7 +60,10 @@ for i in range(10,1,-1):
     print(num_words[i], 'sheep', samp_act[i-2])
     print(choice(['past', 'by']), 'the', rhymes_next + '.')
     print('\n'.join(sample(samp_arb[i-2], 2)))
-    print('Sleep, sheep.\nNow there are...')
+    if i != 2:
+        print('Sleep, sheep.\nNow there are...')
+    else:
+        print('Sleep, sheep.\nNow there is...')
     print()
 
 print("""1
